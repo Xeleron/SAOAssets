@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
@@ -100,103 +101,109 @@ namespace Decrypt
             'Z'
         };
 
+        private static readonly SHA1 Sha1 = SHA1.Create();
+
         private static void Main()
         {
-            //Console.WriteLine(DecodeReleaseServerResourceName("hiizaxgm8"));
-            //Console.ReadKey();
-            var test = new WebClient().DownloadData(
-               "https://saoif-com.sslcs.cdngc.net/resources/3pc56gmd4fz1Qe7G");
-            //CryptionBinaryAsync(false, "KaNaMeCho07", "vh6SyfV6qrjZma0w", 100, test);
-            //File.WriteAllBytes("3pc56gmd4fz1Qe7G_JP_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "KaNaMeCho07", "vh6SyfV6qrjZma0w", 100, bytes);
+            //File.WriteAllBytes($"3pc56gmd4fz1Qe7G_JP_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/3pc56gmd4fz1Qe7G");
-            //CryptionBinaryAsync(false, "KaNaMeCho07", "vh6SyfV6qrjZma0w", 100, test);
-            //File.WriteAllBytes("3pc56gmd4fz1Qe7G_EN_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "KaNaMeCho07", "vh6SyfV6qrjZma0w", 100, bytes);
+            //File.WriteAllBytes($"3pc56gmd4fz1Qe7G_EN_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            var bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources/hiizaxgm8/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_JP_RELEASE_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes(
+                $"rk2EZgv6IfDnsF6o_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
+            bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources/ie6n22b4/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_JP_REVIEW_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_REVIEW_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
+            bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_EN_RELEASE_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
+            bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources_fc/ie6n22b4/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_EN_REVIEW_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
+            bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources/gte5bdyu9/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_JP_gte5bdyu9_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_gte5bdyu9_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
+            bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources/fzin1ace0/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_JP_fzin1ace0_AGAIN.txt", _param.CryptionResult);
-            test = new WebClient().DownloadData(
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_fzin1ace0_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
+            bytes = new WebClient().DownloadData(
                 "https://saoif-com.sslcs.cdngc.net/resources/ey9ebq2p1/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, test);
-            File.WriteAllBytes("rk2EZgv6IfDnsF6o_JP_ey9ebq2p1_AGAIN.txt", _param.CryptionResult);
+            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
+            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_ey9ebq2p1_{ComputeHash(_param.CryptionResult)}.txt",
+                _param.CryptionResult);
 
 
-
-
-            //test = new WebClient().DownloadData(
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources/9sfg5bsc/rk2EZgv6IfDnsF6o");
-            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, test);
-            //File.WriteAllBytes("IOS_rk2EZgv6IfDnsF6o_JP_RELEASE_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
+            //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources/8r7hu8a25/rk2EZgv6IfDnsF6o");
-            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, test);
-            //File.WriteAllBytes("IOS_rk2EZgv6IfDnsF6o_JP_REVIEW_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
+            //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_JP_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/8r7hu8a25/rk2EZgv6IfDnsF6o");
-            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, test);
-            //File.WriteAllBytes("IOS_rk2EZgv6IfDnsF6o_EN_RELEASE_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
+            //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/9sfg5bsc/rk2EZgv6IfDnsF6o");
-            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, test);
-            //File.WriteAllBytes("IOS_rk2EZgv6IfDnsF6o_EN_REVIEW_AGAIN.txt", _param.CryptionResult);
+            //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
+            //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
 
 
-
-
-
-            //test = new WebClient().DownloadData(
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/pv5oEtjD3aMwuCgz");
-            //CryptionBinaryAsync(false, "ToShiMa03", "tj3GjrS9yVfs8jWo", 100, test);
-            //File.WriteAllBytes("pv5oEtjD3aMwuCgz.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "ToShiMa03", "tj3GjrS9yVfs8jWo", 100, bytes);
+            //File.WriteAllBytes($"pv5oEtjD3aMwuCgz.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/clBoG1rvRpgEa5du");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("clBoG1rvRpgEa5du_EN_RELEASE_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"clBoG1rvRpgEa5du_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/ie6n22b4/dpWp6BpzrAs9Qmyz");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("dpWp6BpzrAs9Qmyz_EN_REVIEW_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"dpWp6BpzrAs9Qmyz_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources/ie6n22b4/a7zfiCaoM2jbVPrj");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("a7zfiCaoM2jbVPrj_JP_RELEASE_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"a7zfiCaoM2jbVPrj_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources/hiizaxgm8/bwH5rgw8aUe4ljtq");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("bwH5rgw8aUe4ljtq_JP_REVIEW_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_JP_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources/ie6n22b4/bwH5rgw8aUe4ljtq");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("bwH5rgw8aUe4ljtq_JP_RELEASE_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/bwH5rgw8aUe4ljtq");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("bwH5rgw8aUe4ljtq_EN_RELEASE_AGAIN.txt", _param.CryptionResult);
-            //test = new WebClient().DownloadData(
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+            //bytes = new WebClient().DownloadData(
             //    "https://saoif-com.sslcs.cdngc.net/resources_fc/ie6n22b4/bwH5rgw8aUe4ljtq");
-            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, test);
-            //File.WriteAllBytes("bwH5rgw8aUe4ljtq_EN_REVIEW_AGAIN.txt", _param.CryptionResult);
+            //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
+            //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
+        }
+
+        private static string ComputeHash(byte[] paramCryptionResult)
+        {
+            return string.Concat(Sha1.ComputeHash(paramCryptionResult).Select(x => x.ToString("X2")));
         }
 
         private static string EncodeReleaseServerResourceName(string name)
@@ -300,47 +307,43 @@ namespace Decrypt
             _param.CryptionResult = cryptionResult;
         }
 
-        private static void CryptionBinaryAsync(bool encryption_mode, string password, string salt, int iteration_count,
-            byte[] src_binary)
+        private static void CryptionBinaryAsync(bool encryptionMode, string password, string salt, int iterationCount,
+            byte[] srcBinary)
         {
-            _param = new CryptionParam(encryption_mode, password, GetSaltBinay(salt), iteration_count, src_binary);
+            _param = new CryptionParam(encryptionMode, password, GetSaltBinay(salt), iterationCount, srcBinary);
             ThreadCryptionTask();
         }
 
-        private static byte[] GetSaltBinay(string salt_code)
+        private static byte[] GetSaltBinay(string saltCode)
         {
             var array = new byte[16];
-            var bytes = Encoding.UTF8.GetBytes(salt_code);
-            for (var i = 0; i < 16; i++)
-                if (i < bytes.Length)
-                    array[i] = bytes[i];
-                else
-                    array[i] = 0;
+            var bytes = Encoding.UTF8.GetBytes(saltCode);
+            for (var i = 0; i < 16; i++) array[i] = i < bytes.Length ? bytes[i] : (byte) 0;
             return array;
         }
     }
 
     internal class CryptionParam
     {
+        public readonly bool EncryptionMode;
+
+        public readonly int IterationCount;
+
+        public readonly string Password;
+
+        public readonly byte[] Salt;
+
+        public readonly byte[] SrcBinary;
+
         public byte[] CryptionResult;
 
-        public bool EncryptionMode;
-
-        public int IterationCount;
-
-        public string Password;
-
-        public byte[] Salt;
-
-        public byte[] SrcBinary;
-
-        public CryptionParam(bool encryption_mode, string password, byte[] salt, int iteration_count, byte[] src_binary)
+        public CryptionParam(bool encryptionMode, string password, byte[] salt, int iterationCount, byte[] srcBinary)
         {
-            EncryptionMode = encryption_mode;
+            EncryptionMode = encryptionMode;
             Password = password;
             Salt = salt;
-            IterationCount = iteration_count;
-            SrcBinary = src_binary;
+            IterationCount = iterationCount;
+            SrcBinary = srcBinary;
             CryptionResult = null;
         }
     }
