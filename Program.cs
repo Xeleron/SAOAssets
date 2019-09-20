@@ -108,95 +108,80 @@ namespace SAOAssets
             //CryptionBinaryAsync(false, "KaNaMeCho07", "vh6SyfV6qrjZma0w", 100, bytes);
             //File.WriteAllBytes($"3pc56gmd4fz1Qe7G_JP_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/3pc56gmd4fz1Qe7G");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/3pc56gmd4fz1Qe7G");
             //CryptionBinaryAsync(false, "KaNaMeCho07", "vh6SyfV6qrjZma0w", 100, bytes);
             //File.WriteAllBytes($"3pc56gmd4fz1Qe7G_EN_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             var bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources/hiizaxgm8/rk2EZgv6IfDnsF6o");
+                "https://saoif-com.sslcs.cdngc.net/resources18/gte5bdyu9/rk2EZgv6IfDnsF6o");
             CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
             File.WriteAllBytes(
                 $"rk2EZgv6IfDnsF6o_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt",
                 _param.CryptionResult);
             bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources/ie6n22b4/rk2EZgv6IfDnsF6o");
+                "https://saoif-com.sslcs.cdngc.net/resources18/fzin1ace0/rk2EZgv6IfDnsF6o");
             CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
             File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_REVIEW_{ComputeHash(_param.CryptionResult)}.txt",
                 _param.CryptionResult);
             bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/rk2EZgv6IfDnsF6o");
+                "https://saoif-com.sslcs.cdngc.net/resources18_fc/gte5bdyu9/rk2EZgv6IfDnsF6o");
             CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
             File.WriteAllBytes($"rk2EZgv6IfDnsF6o_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt",
                 _param.CryptionResult);
             bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources_fc/ie6n22b4/rk2EZgv6IfDnsF6o");
+                "https://saoif-com.sslcs.cdngc.net/resources18_fc/fzin1ace0/rk2EZgv6IfDnsF6o");
             CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
             File.WriteAllBytes($"rk2EZgv6IfDnsF6o_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt",
                 _param.CryptionResult);
-            bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources/gte5bdyu9/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
-            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_gte5bdyu9_{ComputeHash(_param.CryptionResult)}.txt",
-                _param.CryptionResult);
-            bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources/fzin1ace0/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
-            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_fzin1ace0_{ComputeHash(_param.CryptionResult)}.txt",
-                _param.CryptionResult);
-            bytes = new WebClient().DownloadData(
-                "https://saoif-com.sslcs.cdngc.net/resources/ey9ebq2p1/rk2EZgv6IfDnsF6o");
-            CryptionBinaryAsync(false, "RiKuOu08", "gAf69pPr5srBi3ar", 100, bytes);
-            File.WriteAllBytes($"rk2EZgv6IfDnsF6o_JP_ey9ebq2p1_{ComputeHash(_param.CryptionResult)}.txt",
-                _param.CryptionResult);
 
 
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources/9sfg5bsc/rk2EZgv6IfDnsF6o");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18/9sfg5bsc/rk2EZgv6IfDnsF6o");
             //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
             //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources/8r7hu8a25/rk2EZgv6IfDnsF6o");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18/8r7hu8a25/rk2EZgv6IfDnsF6o");
             //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
             //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_JP_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/8r7hu8a25/rk2EZgv6IfDnsF6o");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/8r7hu8a25/rk2EZgv6IfDnsF6o");
             //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
             //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/9sfg5bsc/rk2EZgv6IfDnsF6o");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/9sfg5bsc/rk2EZgv6IfDnsF6o");
             //CryptionBinaryAsync(false, "KoBunSha06", "prM2uGjxTe7dYa9b", 100, bytes);
             //File.WriteAllBytes($"IOS_rk2EZgv6IfDnsF6o_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
 
 
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/pv5oEtjD3aMwuCgz");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/gte5bdyu9/pv5oEtjD3aMwuCgz");
             //CryptionBinaryAsync(false, "ToShiMa03", "tj3GjrS9yVfs8jWo", 100, bytes);
             //File.WriteAllBytes($"pv5oEtjD3aMwuCgz.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/clBoG1rvRpgEa5du");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/gte5bdyu9/clBoG1rvRpgEa5du");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"clBoG1rvRpgEa5du_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/ie6n22b4/dpWp6BpzrAs9Qmyz");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/fzin1ace0/dpWp6BpzrAs9Qmyz");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"dpWp6BpzrAs9Qmyz_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources/ie6n22b4/a7zfiCaoM2jbVPrj");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18/fzin1ace0/a7zfiCaoM2jbVPrj");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"a7zfiCaoM2jbVPrj_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources/hiizaxgm8/bwH5rgw8aUe4ljtq");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18/gte5bdyu9/bwH5rgw8aUe4ljtq");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_JP_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources/ie6n22b4/bwH5rgw8aUe4ljtq");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18/fzin1ace0/bwH5rgw8aUe4ljtq");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_JP_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/hiizaxgm8/bwH5rgw8aUe4ljtq");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/gte5bdyu9/bwH5rgw8aUe4ljtq");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_EN_RELEASE_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
             //bytes = new WebClient().DownloadData(
-            //    "https://saoif-com.sslcs.cdngc.net/resources_fc/ie6n22b4/bwH5rgw8aUe4ljtq");
+            //    "https://saoif-com.sslcs.cdngc.net/resources18_fc/fzin1ace0/bwH5rgw8aUe4ljtq");
             //CryptionBinaryAsync(false, "BuKuRo23", "jmN6s3trUh9jgVe", 100, bytes);
             //File.WriteAllBytes($"bwH5rgw8aUe4ljtq_EN_REVIEW_{ComputeHash(_param.CryptionResult)}.txt", _param.CryptionResult);
         }
